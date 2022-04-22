@@ -1,0 +1,54 @@
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    padding: 20px;
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+button {
+    margin-top: 20px;
+    font: inherit;
+}
+
+input {
+    width: 20%;
+    padding: 7px 0 7px 30px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input:valid {
+    background: url("images/checkmark.jpg");
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: red;
+}
+
+input:invalid:focus:not(:placeholder-shown) ~ .requirements {
+    max-height: 200px;
+    padding: 0 30px 20px 50px;
+}
+
+.requirements {
+    padding: 0 30px 0 50px;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
+  }
